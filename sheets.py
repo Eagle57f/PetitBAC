@@ -14,16 +14,18 @@ sheet = client.open("BddBAC").sheet1
 data = sheet.get_all_records()
 
 
-print(data)
 
-for dictionary in data:
-    for key in dictionary.keys():
-        print(dictionary[key])
+def get_sheet_letter():
+    i = 0
+    for key in data[0].keys():
+        if i == 0:
+            letter_and_code = key
+        i += 1
+    list_letter_and_code = letter_and_code.split(":")
+    return list_letter_and_code
         
-        
-def delete_sheet(sheet):
-    print(len(data))
+
+def set_first_row(first_row):
     for row in range(len(data)+1):
         sheet.delete_rows(1)
-    
-delete_sheet(sheet)
+    sheet.insert_row(first_row, 1)
