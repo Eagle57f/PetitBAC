@@ -2,11 +2,15 @@ import tkinter, gspread, os
 from oauth2client.service_account import ServiceAccountCredentials
 
 
-scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file" , "https://www.googleapis.com/auth/drive"]
+scope = ["https://spreadsheets.google.com/feeds",
+         'https://www.googleapis.com/auth/spreadsheets',
+         "https://www.googleapis.com/auth/drive.file" ,
+         "https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name(f"{os.path.dirname(__file__)}\\creds.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("BddBAC").sheet1
 cats_and_letter = sheet.get_all_values()[0]
+
 
 letter = cats_and_letter[0]
 cats = cats_and_letter[1:]
@@ -48,8 +52,6 @@ for item in cats:
     entry.grid(row=count_cats+1, column=1)
     list_of_entry.append(entry)
 print(list_of_entry)
-
-
 
 
 

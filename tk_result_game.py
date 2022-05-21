@@ -2,7 +2,10 @@ import tkinter, gspread, os
 from oauth2client.service_account import ServiceAccountCredentials
 
 
-scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file" , "https://www.googleapis.com/auth/drive"]
+scope = ["https://spreadsheets.google.com/feeds",
+         'https://www.googleapis.com/auth/spreadsheets',
+         "https://www.googleapis.com/auth/drive.file" ,
+         "https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name(f"{os.path.dirname(__file__)}\\creds.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("BddBAC").sheet1
