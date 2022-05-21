@@ -1,5 +1,17 @@
-import random
-import tkinter, sheets
+import random, tkinter, sheets, gspread, os
+from oauth2client.service_account import ServiceAccountCredentials
+
+
+
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file" , "https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name(f"{os.path.dirname(__file__)}\\creds.json", scope)
+
+client = gspread.authorize(creds)
+
+sheet = client.open("BddBAC").sheet1
+
+data = sheet.get_all_records()
 
 all_cat = []
 new_cat = ""
@@ -27,7 +39,18 @@ def save():
     first_row = [random.choice(["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"])]
     print(first_row)
     first_row = first_row + all_cat
-    sheets.set_first_row(first_row)
+    for row in range(len(data)+1):
+        sheet.delete_rows(1)
+    sheet.insert_row(first_row, 1)
+    
+def get_sheet_letter():
+    i = 0
+    for key in data[0].keys():
+        if i == 0:
+            letter_and_code = key
+        i += 1
+    list_letter_and_code = letter_and_code.split(":")
+    return list_letter_and_code
 
 
 label = tkinter.Label(menu, text=str_all_cats)

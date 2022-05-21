@@ -21,6 +21,9 @@ def save():
     for entrys in list_of_entry:
         list_of_response.append(entrys.get())
     sheet.insert_row(list_of_response, 2)
+    
+    
+
 
 game = tkinter.Tk()
 game.geometry("630x300")
@@ -45,6 +48,8 @@ for item in cats:
     entry.grid(row=count_cats+1, column=1)
     list_of_entry.append(entry)
 print(list_of_entry)
+
+
 
 
 
