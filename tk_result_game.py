@@ -12,7 +12,7 @@ sheet = client.open("BddBAC").sheet1
 data = sheet.get_all_values()
 
 
-   
+
 total_rows = len(data) 
 total_columns = len(data[0]) 
 
