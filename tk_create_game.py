@@ -2,7 +2,7 @@ import random, tkinter, gspread, os
 from oauth2client.service_account import ServiceAccountCredentials
 
 
-scope = ["https://spreadsheets.google.com/feeds"
+scope = ["https://spreadsheets.google.com/feeds",
          'https://www.googleapis.com/auth/spreadsheets',
          "https://www.googleapis.com/auth/drive.file",
          "https://www.googleapis.com/auth/drive"]
