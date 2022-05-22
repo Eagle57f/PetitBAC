@@ -1,5 +1,6 @@
 import tkinter, gspread, os
 from oauth2client.service_account import ServiceAccountCredentials
+from tkinter import messagebox
 
 
 scope = ["https://spreadsheets.google.com/feeds",
@@ -26,7 +27,13 @@ def save():
         list_of_response.append(entrys.get())
     sheet.insert_row(list_of_response, 2)
     
-    
+def save_and_exit():
+    if name_entry.get() != "" and name_entry.get() != " ":
+        save()
+        game.destroy()
+    else:
+        messagebox.showwarning("Erreur", "Veuillez entrer un nom")
+
 
 
 game = tkinter.Tk()
@@ -36,7 +43,7 @@ game.geometry("630x300")
 letter_label = tkinter.Label(game, text=f"La lettre pour cette partie est: {letter}")
 letter_label.grid(row=1, column=0)
 
-save_button = tkinter.Button(game, text="Save and Exit", command=lambda:(save(), game.destroy()))
+save_button = tkinter.Button(game, text="Save and Exit", command=lambda:(save_and_exit()))
 save_button.grid(row=0, column=2)
 
 name_label = tkinter.Label(game, text="Nom:")

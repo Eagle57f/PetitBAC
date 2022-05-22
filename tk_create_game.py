@@ -70,5 +70,3 @@ save_exit_button = tkinter.Button(menu, text="Save and Exit", command=lambda:(sa
 save_exit_button.pack()
 
 tkinter.mainloop()
-
-print(first_row)
