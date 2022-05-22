@@ -34,3 +34,8 @@
     pip install oauth2client
     pip3 install oauth2client
     python -m pip install oauth2client
+    
+# Lancer les fichiers via cmd:
+
+    python tk_play_game.py
+    python tk_result_game.py
