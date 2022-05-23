@@ -1,2 +1,2 @@
-python tk_launch_game.py
+python tk_play_game.py
 exit
