@@ -1,5 +1,5 @@
-#Le petit BAC via python
-##Créer une partie:
+# Le petit BAC via python
+## Créer une partie:
 
     Lancer le fichier python "tk_create_game.py".
 
@@ -9,7 +9,7 @@
 
     Pour sauvegarder les catégories, appuyer sur "Save and exit".
 
-###Jouer une partie:
+### Jouer une partie:
 
     - Lancer le fichier python "tk_play_game.py".
 
@@ -21,7 +21,7 @@
 
     Après que tout les participants aient enregistrés leurs réponses, lancer le fichier python "tk_result_game.py".
 
-###Ajouter les libs:
+### Ajouter les libs:
 
     pip3.10 install gspread
     pip install gspread
@@ -32,7 +32,7 @@
     pip3 install oauth2client
     python -m pip install oauth2client
 
-###Lancer les fichiers via cmd:
+### Lancer les fichiers via cmd:
 
     python tk_play_game.py
     python tk_result_game.py
