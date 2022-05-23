@@ -1,8 +1,13 @@
 # **Le petit BAC via python**
 
-## Créer une partie:
 
-    Lancer le fichier python "tk_create_game.py".
+## Lancer le menu du jeu:
+
+    Double cliquez sur le le fichier launch.bat.
+
+### Créer une partie:
+    
+    Sur le menu, cliquez sur le bouton "Create Game".
 
     Après que la fenêtre s'est ouverte, entrer une par une les catégories en appuyant à chaque fois sur le bouton "Add category".
 
@@ -10,32 +15,20 @@
 
     Pour sauvegarder les catégories, appuyer sur "Save and exit".
 
-## Jouer une partie:
+### Jouer à la partie:
 
-    - Lancer le fichier python "tk_play_game.py".
+    Sur le menu, cliquez sur le bouton "Play Game".
 
-    - Après que la fenêtre s'est ouverte,  entrer vos réponses dans les cases, ainsi que votre nom ou pseudo dans la case indiquée.
+    Après que la fenêtre s'est ouverte,  entrer vos réponses dans les cases, ainsi que votre nom ou pseudo dans la case indiquée.
 
     Pour sauvegarder vos résultats, cliquer sur "Save and exit".
 
-## Afficher les résultats:
+### Voir les résultats de la partie:
 
-    Après que tout les participants aient enregistrés leurs réponses, lancer le fichier python "tk_result_game.py".
-    
-    
-    
-# Ajouter les libs:
+    Après que tout les participants aient enregistrés leurs réponses, cliquez sur le bouton "Result Game" sur le menu.
 
-    pip3.10 install gspread
-    pip install gspread
-    pip3 install gspread
-    python -m pip install gspread
-    pip3.10 install oauth2client
-    pip install oauth2client
-    pip3 install oauth2client
-    python -m pip install oauth2client
-    
-# Lancer les fichiers via cmd:
+### Installer les librairies nécessaires:
 
-    python tk_play_game.py
-    python tk_result_game.py
+    Pour installer les librairies nécessaires, cliquez sur le bouton "Install libs" sur le menu.
+    
+    Cette action est obligatoire avant la première utilisation du jeu.
